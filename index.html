@@ -10,15 +10,26 @@
 <body>
   <header class="site-header">
     <div class="header-main container">
-      <a class="brand" href="#top" aria-label="Con Cưng - Trang chủ">ConCưng<span>♥</span></a>
+      <a class="brand" href="#top" aria-label="Con Cưng - Trang chủ">
+        ConCưng<span>♥</span>
+      </a>
+
       <form class="search" role="search" action="#products">
         <label class="sr-only" for="site-search">Tìm kiếm sản phẩm</label>
-        <input id="site-search" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu...">
+        <input
+          id="site-search"
+          type="search"
+          placeholder="Tìm kiếm sản phẩm, thương hiệu..."
+        >
         <button type="submit" aria-label="Tìm kiếm">⌕</button>
       </form>
+
       <a class="header-link" href="#account">Tài khoản</a>
-      <a class="header-link cart-link" href="#products">Giỏ hàng <span class="cart-count">0</span></a>
+      <a class="header-link cart-link" href="#products">
+        Giỏ hàng <span class="cart-count">0</span>
+      </a>
     </div>
+
     <nav class="category-nav" aria-label="Danh mục chính">
       <div class="container nav-inner">
         <a href="#products">Danh mục sản phẩm</a>
@@ -38,95 +49,180 @@
         <p class="eyebrow">Dành điều tốt nhất cho bé</p>
         <h1 id="hero-title">Sản phẩm tốt nhất<br>cho bé yêu</h1>
         <p>Chất lượng · An toàn · Chính hãng</p>
-        <a class="primary-button" href="#products">Khám phá ngay <span aria-hidden="true">→</span></a>
+        <a class="primary-button" href="#products">
+          Khám phá ngay <span aria-hidden="true">→</span>
+        </a>
       </div>
       <div class="hero-decoration" aria-hidden="true">♡</div>
     </section>
 
-    <section id="products" class="products-section" aria-labelledby="products-title">
+    <section
+      id="products"
+      class="products-section"
+      aria-labelledby="products-title"
+    >
       <div class="section-heading">
         <div>
           <p class="eyebrow">Lựa chọn dành cho gia đình</p>
           <h2 id="products-title">Sản phẩm nổi bật</h2>
         </div>
-        <a class="view-all" href="#products">Xem tất cả <span aria-hidden="true">→</span></a>
+        <a class="view-all" href="#products">
+          Xem tất cả <span aria-hidden="true">→</span>
+        </a>
       </div>
 
       <div class="product-grid">
+        <!-- Sản phẩm 1: Aptamil -->
         <article class="product-card">
-          <a class="product-image" href="#aptamil" aria-label="Xem chi tiết Sữa Aptamil Profutura số 3">
+          <a
+            class="product-image"
+            href="#aptamil"
+            aria-label="Xem thông tin Sữa Aptamil Profutura số 3"
+          >
             <span class="discount-badge">-20%</span>
-            <img src="images/aptamil.jpg" alt="Hộp sữa Aptamil Profutura số 3">
+            <img
+              src="images/aptamil.jpg"
+              alt="Hộp sữa Aptamil Profutura số 3"
+            >
           </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="#aptamil">Sữa Aptamil Profutura số 3 (800g)</a></h3>
+
+          <div class="product-info" id="aptamil">
+            <h3 class="product-name">
+              Sữa Aptamil Profutura số 3 (800g)
+            </h3>
             <div class="price-block">
-              <span class="original-price">749.000đ</span>
+              <s class="original-price">749.000đ</s>
               <span class="sale-price">599.000đ</span>
               <span class="saving">Tiết kiệm 150.000đ</span>
             </div>
-            <button class="add-button" type="button" data-product="Sữa Aptamil Profutura số 3">＋ Thêm vào giỏ</button>
+            <button
+              class="add-button"
+              type="button"
+              data-product="Sữa Aptamil Profutura số 3"
+            >
+              ＋ Thêm vào giỏ
+            </button>
           </div>
         </article>
 
+        <!-- Sản phẩm 2: Pampers -->
         <article class="product-card">
-          <a class="product-image" href="#pampers" aria-label="Xem chi tiết Tã quần Pampers size XL">
+          <a
+            class="product-image"
+            href="#pampers"
+            aria-label="Xem thông tin Tã quần Pampers size XL"
+          >
             <span class="discount-badge">-15%</span>
-            <img src="images/pampers.jpg" alt="Gói tã quần Pampers size XL">
+            <img
+              src="images/pampers.jpg"
+              alt="Gói tã quần Pampers size XL"
+            >
           </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="#pampers">Tã quần Pampers size XL (46 miếng)</a></h3>
+
+          <div class="product-info" id="pampers">
+            <h3 class="product-name">
+              Tã quần Pampers size XL (46 miếng)
+            </h3>
             <div class="price-block">
-              <span class="original-price">359.000đ</span>
+              <s class="original-price">359.000đ</s>
               <span class="sale-price">305.000đ</span>
               <span class="saving">Tiết kiệm 54.000đ</span>
             </div>
-            <button class="add-button" type="button" data-product="Tã quần Pampers size XL">＋ Thêm vào giỏ</button>
+            <button
+              class="add-button"
+              type="button"
+              data-product="Tã quần Pampers size XL"
+            >
+              ＋ Thêm vào giỏ
+            </button>
           </div>
         </article>
 
+        <!-- Sản phẩm 3: Bình sữa Pigeon -->
         <article class="product-card">
-          <a class="product-image" href="#pigeon" aria-label="Xem chi tiết Bình sữa Pigeon cổ rộng">
+          <a
+            class="product-image"
+            href="#pigeon"
+            aria-label="Xem thông tin Bình sữa Pigeon cổ rộng"
+          >
             <span class="discount-badge">-25%</span>
-            <img src="images/bottle.jpg" alt="Bình sữa Pigeon cổ rộng">
+            <img
+              src="images/bottle.jpg"
+              alt="Bình sữa Pigeon cổ rộng"
+            >
           </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="#pigeon">Bình sữa Pigeon cổ rộng (160ml)</a></h3>
+
+          <div class="product-info" id="pigeon">
+            <h3 class="product-name">
+              Bình sữa Pigeon cổ rộng (160ml)
+            </h3>
             <div class="price-block">
-              <span class="original-price">199.000đ</span>
+              <s class="original-price">199.000đ</s>
               <span class="sale-price">149.000đ</span>
               <span class="saving">Tiết kiệm 50.000đ</span>
             </div>
-            <button class="add-button" type="button" data-product="Bình sữa Pigeon cổ rộng">＋ Thêm vào giỏ</button>
+            <button
+              class="add-button"
+              type="button"
+              data-product="Bình sữa Pigeon cổ rộng"
+            >
+              ＋ Thêm vào giỏ
+            </button>
           </div>
         </article>
 
+        <!-- Sản phẩm 4: Xe đẩy Joie -->
         <article class="product-card">
-          <a class="product-image" href="#joie" aria-label="Xem chi tiết Xe đẩy em bé Joie Litetrax">
+          <a
+            class="product-image"
+            href="#joie"
+            aria-label="Xem thông tin Xe đẩy em bé Joie Litetrax"
+          >
             <span class="discount-badge">-18%</span>
-            <img src="images/stroller.jpg" alt="Xe đẩy em bé Joie Litetrax màu tối">
+            <img
+              src="images/stroller.jpg"
+              alt="Xe đẩy em bé Joie Litetrax màu tối"
+            >
           </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="#joie">Xe đẩy em bé Joie Litetrax (2024)</a></h3>
+
+          <div class="product-info" id="joie">
+            <h3 class="product-name">
+              Xe đẩy em bé Joie Litetrax (2024)
+            </h3>
             <div class="price-block">
-              <span class="original-price">5.990.000đ</span>
+              <s class="original-price">5.990.000đ</s>
               <span class="sale-price">4.890.000đ</span>
               <span class="saving">Tiết kiệm 1.100.000đ</span>
             </div>
-            <button class="add-button" type="button" data-product="Xe đẩy em bé Joie Litetrax">＋ Thêm vào giỏ</button>
+            <button
+              class="add-button"
+              type="button"
+              data-product="Xe đẩy em bé Joie Litetrax"
+            >
+              ＋ Thêm vào giỏ
+            </button>
           </div>
         </article>
       </div>
-      <p class="demo-note">Đây là giao diện minh họa phục vụ bài tập. Tên sản phẩm, hình ảnh và giá mẫu không đại diện cho giá bán hiện tại của cửa hàng.</p>
+
+      <p class="demo-note">
+        Đây là giao diện minh họa phục vụ bài tập. Tên sản phẩm, hình ảnh
+        và giá mẫu không đại diện cho giá bán hiện tại của cửa hàng.
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="brand brand-footer">ConCưng<span>♥</span></span>
-      <p>Giao diện thực hành HTML5 &amp; CSS3 · Không kết nối hệ thống bán hàng.</p>
+      <span class="brand brand-footer">
+        ConCưng<span>♥</span>
+      </span>
+      <p>
+        Giao diện thực hành HTML5 &amp; CSS3 · Không kết nối hệ thống bán hàng.
+      </p>
     </div>
   </footer>
+
   <script>
     // Tương tác minh họa: thông báo khi bấm nút, không lưu giỏ hàng thật.
     document.querySelectorAll('.add-button').forEach(function (button) {
