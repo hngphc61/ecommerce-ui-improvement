@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.1 - Bật/tắt JavaScript</title>
+  
+</head>
+<body>
+  <main>
+    <h1>Exercise 8.1</h1>
+    <h2>Enabling/Disabling JavaScript</h2>
+    <p>Trang kiểm tra bổ sung để thực hành bật/tắt JavaScript trên máy cá nhân.</p>
+    <div id="status" hidden class="status enabled"></div>
+    <script>
+      var statusElement = document.getElementById("status");
+      statusElement.textContent = "You have JavaScript enabled - JavaScript đang bật.";
+      statusElement.hidden = false;
+    </script>
+    <noscript>
+      <p class="status disabled">You have JavaScript disabled - JavaScript đang tắt.</p>
+    </noscript>
+    <p>Tải lại trang sau khi thay đổi cài đặt để quan sát kết quả.</p>
+    </p>
+  </main>
+</body>
+</html>

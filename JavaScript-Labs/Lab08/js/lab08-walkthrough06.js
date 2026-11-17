@@ -1,0 +1,36 @@
+/* add code below this */
+// String objects and string literals have different types.
+var stringOne = new String("Test");
+var stringTwo = "Test";
+var stringThree = "Test";
+var stringFour = new String("Test");
+
+document.write(stringOne);
+document.write("<br>typeof stringOne=" + typeof stringOne);
+document.write("<br>typeof stringThree=" + typeof stringThree);
+
+if (stringOne == stringTwo) {
+    document.write("<br>stringOne has = value to stringTwo");
+}
+if (stringOne == stringFour) {
+    document.write("<br>stringOne has = value to stringFour");
+}
+if (stringOne === stringTwo) {
+    document.write("<br>stringOne has = value and = type to stringTwo");
+}
+if (stringTwo === stringThree) {
+    document.write("<br>stringTwo has = value and = type to stringThree");
+}
+if (stringTwo === stringFour) {
+    document.write("<br>stringTwo has = value and = type to stringFour");
+}
+
+// Date uses the current date and time of the computer.
+var dateOne = new Date();
+document.write("<p>" + dateOne + "</p>");
+
+// Math provides constants and mathematical functions.
+document.write(Math.PI + "<br/>");
+document.write(Math.sqrt(4) + "<br/>");
+document.write(Math.random() + "<br/>");
+
