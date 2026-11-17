@@ -1,5 +1,12 @@
 # E-commerce UI Improvement
 
+## Danh sách bài tập theo buổi
+
+- [Bài giao diện E-commerce ban đầu](./index.html)
+- [Buổi 3 – Bài tập về nhà](./buoi3-ve-nha/index.html)
+- Buổi 4 – Bài tập trên lớp: [Anh hùng](./buoi4-tren-lop/anhhung.html), [Anh hùng JavaScript và Rồng Già](./buoi4-tren-lop/AnhHungJavascript_vs_RongGia.html), [Tài liệu bài tập](./buoi4-tren-lop/Buoi4.docx).
+
+
 ## 1. Giới thiệu
 
 Đây là giao diện mẫu website thương mại điện tử dành cho nhóm sản phẩm mẹ và bé, xây dựng bằng HTML5 và CSS3. Khu vực được cải tiến trọng tâm là thẻ sản phẩm: tên sản phẩm, giá khuyến mãi, giá gốc và tỷ lệ giảm giá được phân cấp thị giác rõ ràng hơn.
