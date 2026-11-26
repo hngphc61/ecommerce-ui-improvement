@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sổ Thu Chi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">₫</span> Sổ Thu Chi</div>
+    <nav>
+      <a href="#overview" data-view="overview">Tổng quan</a>
+      <a href="#transactions" data-view="transactions">Giao dịch</a>
+      <a href="#categories" data-view="categories">Danh mục &amp; ngân sách</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <h1 id="page-title">Tổng quan</h1>
+      <div class="actions">
+        <label class="month">Tháng <input type="month" id="month" required></label>
+        <button class="btn primary" id="add-transaction">+ Thêm giao dịch</button>
+      </div>
+    </header>
+
+    <section id="view-overview" class="view">
+      <div class="cards">
+        <article class="card"><span>Tổng thu trong tháng</span><strong id="s-income" class="income"></strong></article>
+        <article class="card"><span>Tổng chi trong tháng</span><strong id="s-expense" class="expense"></strong></article>
+        <article class="card"><span>Chênh lệch thu - chi</span><strong id="s-net"></strong></article>
+        <article class="card highlight"><span>Số dư lũy kế</span><strong id="s-balance"></strong></article>
+      </div>
+      <div class="status-summary" id="status-summary"></div>
+      <div class="grid">
+        <article class="panel">
+          <h2>Thu chi 6 tháng</h2>
+          <div class="legend"><span class="dot income-bg"></span>Thu <span class="dot expense-bg"></span>Chi</div>
+          <div class="chart" id="monthly-chart"></div>
+        </article>
+        <article class="panel">
+          <h2>Chi tiêu theo danh mục</h2>
+          <div id="category-chart"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-transactions" class="view" hidden>
+      <div class="panel">
+        <div class="filters">
+          <input type="search" id="f-q" placeholder="Tìm theo nội dung, ghi chú…" aria-label="Tìm kiếm">
+          <select id="f-type" aria-label="Loại">
+            <option value="">Tất cả loại</option><option value="income">Thu</option><option value="expense">Chi</option>
+          </select>
+          <select id="f-category" aria-label="Danh mục"></select>
+          <select id="f-status" aria-label="Trạng thái">
+            <option value="">Tất cả trạng thái</option>
+            <option value="pending">Chờ xử lý</option><option value="completed">Hoàn thành</option><option value="cancelled">Đã hủy</option>
+          </select>
+          <a class="btn" id="export">Xuất CSV</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Ngày</th><th>Nội dung</th><th>Danh mục</th><th class="right">Số tiền</th><th>Trạng thái</th><th class="right">Thao tác</th></tr></thead>
+            <tbody id="transaction-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-categories" class="view" hidden>
+      <div class="panel">
+        <div class="panel-head"><h2>Danh mục thu chi</h2><button class="btn primary" id="add-category">+ Thêm danh mục</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tên danh mục</th><th>Loại</th><th class="right">Ngân sách / tháng</th><th class="right">Số giao dịch</th><th class="right">Thao tác</th></tr></thead>
+            <tbody id="category-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="transaction-dialog">
+    <form id="transaction-form">
+      <h2 id="transaction-title"></h2>
+      <label>Nội dung<input name="title" maxlength="120" required></label>
+      <div class="row">
+        <label>Số tiền (VND)<input name="amount" type="number" min="1" max="1000000000000" step="1" required></label>
+        <label>Ngày<input name="date" type="date" required></label>
+      </div>
+      <div class="row">
+        <label>Danh mục<select name="category_id" required></select></label>
+        <label>Trạng thái<select name="status">
+          <option value="completed">Hoàn thành</option><option value="pending">Chờ xử lý</option><option value="cancelled">Đã hủy</option>
+        </select></label>
+      </div>
+      <label>Ghi chú<textarea name="note" rows="3" maxlength="500"></textarea></label>
+      <p class="error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="btn" data-close>Hủy</button><button class="btn primary">Lưu</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="category-dialog">
+    <form id="category-form">
+      <h2 id="category-title"></h2>
+      <label>Tên danh mục<input name="name" maxlength="50" required></label>
+      <label>Loại<select name="type"><option value="expense">Chi</option><option value="income">Thu</option></select></label>
+      <label>Ngân sách mỗi tháng (VND, 0 = không giới hạn)<input name="monthly_budget" type="number" min="0" max="1000000000000" step="1" value="0" required></label>
+      <p class="error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="btn" data-close>Hủy</button><button class="btn primary">Lưu</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
